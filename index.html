@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salim Muhammad Bhonhariya — Resume</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #f4f6f9;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 32px auto;
+      background: #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #0a2e5c;
+      color: #fff;
+      padding: 40px 48px 32px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      font-size: 13px;
+      color: #b8d0f0;
+    }
+
+    .contact-bar a {
+      color: #7eb8f7;
+      text-decoration: none;
+    }
+
+    .contact-bar a:hover { text-decoration: underline; }
+
+    /* ── Body ── */
+    .body {
+      padding: 32px 48px 48px;
+    }
+
+    /* ── Section ── */
+    section { margin-bottom: 28px; }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #0a2e5c;
+      border-bottom: 2px solid #0a2e5c;
+      padding-bottom: 4px;
+      margin-bottom: 14px;
+    }
+
+    /* ── Summary ── */
+    .summary p { color: #333; }
+
+    /* ── Competencies ── */
+    .competency-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background: #e8f0fb;
+      color: #0a2e5c;
+      border: 1px solid #c2d5f0;
+      border-radius: 3px;
+      padding: 3px 10px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 22px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .company {
+      font-weight: 700;
+      font-size: 15px;
+      color: #0a2e5c;
+    }
+
+    .location-dates {
+      font-size: 12.5px;
+      color: #555;
+      white-space: nowrap;
+    }
+
+    .role {
+      font-style: italic;
+      color: #444;
+      font-size: 13.5px;
+      margin: 2px 0 8px;
+    }
+
+    .role-dates {
+      font-style: normal;
+      font-weight: 600;
+      color: #0a2e5c;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.bullets li {
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 5px;
+      color: #222;
+    }
+
+    ul.bullets li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: #0a2e5c;
+    }
+
+    ul.bullets li strong { color: #0a2e5c; }
+
+    /* ── Skills table ── */
+    .skills-table { width: 100%; border-collapse: collapse; }
+
+    .skills-table tr { border-bottom: 1px solid #eef0f4; }
+    .skills-table tr:last-child { border-bottom: none; }
+
+    .skills-table td {
+      padding: 6px 8px;
+      vertical-align: top;
+      font-size: 13px;
+    }
+
+    .skills-table td:first-child {
+      font-weight: 700;
+      color: #0a2e5c;
+      white-space: nowrap;
+      width: 200px;
+    }
+
+    /* ── Certs / Education ── */
+    .cert-list, .edu-list { list-style: none; }
+
+    .cert-list li {
+      padding: 3px 0 3px 14px;
+      position: relative;
+    }
+
+    .cert-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #0a2e5c;
+      font-size: 11px;
+    }
+
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .edu-item .degree { font-weight: 700; color: #0a2e5c; }
+    .edu-item .school { font-size: 13px; color: #555; }
+    .edu-item .year   { font-size: 13px; color: #555; white-space: nowrap; }
+
+    /* ── Print ── */
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; border-radius: 0; }
+      header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .tag  { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+
+    @media (max-width: 680px) {
+      header, .body { padding: 24px 20px; }
+      .job-header { flex-direction: column; }
+      .skills-table td:first-child { width: auto; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ══ HEADER ══ -->
+  <header>
+    <h1>Salim Muhammad Bhonhariya</h1>
+    <div class="contact-bar">
+      <span>Canton, MI</span>
+      <a href="mailto:salimbhonhariya@gmail.com">salimbhonhariya@gmail.com</a>
+      <span>(734) 635-3816</span>
+      <a href="https://linkedin.com/in/salimbhonhariya" target="_blank">linkedin.com/in/salimbhonhariya</a>
+      <a href="https://github.com/salimbhonhariya" target="_blank">github.com/salimbhonhariya</a>
+    </div>
+  </header>
+
+  <div class="body">
+
+    <!-- ══ SUMMARY ══ -->
+    <section class="summary">
+      <div class="section-title">Professional Summary</div>
+      <p>Senior Principal Engineer and Cloud Architect with 20+ years leading enterprise solution architecture, multi-cloud transformation, CI/CD automation, DevSecOps, and engineering teams of 12 or more. Microsoft Certified Azure Solutions Architect with deep expertise across Azure, AWS, and GCP. Delivered 99.95% platform uptime, 60% reductions in deployment cycle time, and SOC 2 and HIPAA compliance alignment across automotive (Ford Motor Company, Bosch), financial services, healthcare, and enterprise SaaS verticals. Proven architecture review board leader and executive stakeholder communicator with a track record of translating complex business requirements into scalable, secure, high-availability platforms that drive measurable organizational outcomes. Targeting senior cloud architecture and engineering leadership roles focused on multi-cloud transformation, platform modernization, and AI/ML integration at scale.</p>
+    </section>
+
+    <!-- ══ COMPETENCIES ══ -->
+    <section>
+      <div class="section-title">Core Competencies</div>
+      <div class="competency-grid">
+        <span class="tag">Multi-Cloud Architecture (Azure, AWS, GCP)</span>
+        <span class="tag">Enterprise Solution Design &amp; Governance</span>
+        <span class="tag">Microservices &amp; Containerization</span>
+        <span class="tag">Kubernetes &amp; Docker</span>
+        <span class="tag">CI/CD Pipeline Engineering</span>
+        <span class="tag">DevSecOps</span>
+        <span class="tag">Infrastructure as Code (Terraform, CloudFormation)</span>
+        <span class="tag">Identity &amp; Access Management (OAuth 2.0, Azure AD, ADFS)</span>
+        <span class="tag">API &amp; Integration Architecture (REST, WCF, OData)</span>
+        <span class="tag">AI/ML Architecture &amp; MLOps</span>
+        <span class="tag">Observability &amp; SRE (Prometheus, Grafana, ELK)</span>
+        <span class="tag">SOC 2 &amp; HIPAA &amp; CMMI v3.0 Compliance</span>
+        <span class="tag">Architecture Review Board Facilitation</span>
+        <span class="tag">Engineering Leadership (12+ FTEs)</span>
+        <span class="tag">Agile, SAFe &amp; DevOps Delivery Frameworks</span>
+      </div>
+    </section>
+
+    <!-- ══ EXPERIENCE ══ -->
+    <section>
+      <div class="section-title">Professional Experience</div>
+
+      <!-- UWM -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">United Wholesale Mortgage</span>
+          <span class="location-dates">Pontiac, MI (Remote) &nbsp;|&nbsp; Jan 2025 – Present</span>
+        </div>
+
+        <div class="role">Senior Principal Engineer, IT Enablement Services <span class="role-dates">Nov 2025 – Present</span></div>
+        <ul class="bullets">
+          <li>Evaluated <strong>40+ enterprise applications</strong> across AWS, Azure, and GCP to identify scalability gaps and migration pathways, reducing infrastructure costs by <strong>25%</strong> through rationalization and right-sizing across the full application portfolio.</li>
+          <li>Defined <strong>cloud-native transformation roadmaps</strong> migrating 10+ monolithic systems to containerized microservices architectures, compressing average release cycles from 3 weeks to under 4 days.</li>
+          <li>Championed <strong>Infrastructure as Code</strong> using Terraform and CloudFormation, cutting environment provisioning from days to under 2 hours and eliminating configuration drift across 15+ environments.</li>
+          <li>Orchestrated <strong>Kubernetes</strong> workloads across hybrid and multi-cloud environments, achieving <strong>99.95% platform availability</strong> with zero-downtime rollout strategies and automated rollback policies.</li>
+          <li>Standardized <strong>CI/CD pipelines</strong> across Jenkins, GitLab CI, and Azure DevOps, increasing deployment frequency 4x and reducing failed deployments to under 2% across 3 cloud providers simultaneously.</li>
+          <li>Embedded <strong>tfsec, Trivy, and SAST/DAST</strong> tooling into all pipeline stages, cutting security vulnerabilities reaching production by over 70% and achieving full DevSecOps pipeline compliance.</li>
+          <li>Architected <strong>Prometheus, Grafana, ELK, and OpenTelemetry</strong> observability stack, reducing MTTR from 4 hours to under 45 minutes across critical distributed services.</li>
+          <li>Chaired <strong>architecture review board</strong> sessions governing enterprise-wide technical decisions across 8 business units.</li>
+          <li>Governed approximately <strong>$12M annual cloud spend</strong> portfolio through structured vendor evaluation, SaaS platform assessments, and contract alignment.</li>
+          <li>Led evaluation and adoption of third-party tools, frameworks, and cloud services (SaaS/PaaS) aligned with corporate performance standards and long-term architectural strategy.</li>
+        </ul>
+
+        <div class="role" style="margin-top:12px;">Strategic Technical Coach, IT Shared Services <span class="role-dates">Jan 2025 – Oct 2025</span></div>
+        <ul class="bullets">
+          <li>Architected modular <strong>Terraform</strong> environments and <strong>Docker</strong> multi-stage builds achieving full environment parity, reducing environment-related defects by 40%.</li>
+          <li>Engineered self-healing <strong>CI/CD pipelines</strong> with integrated DevSecOps scanners and OpenTelemetry instrumentation, improving pipeline pass rate from <strong>78% to 96%</strong> within two quarters.</li>
+          <li>Guided 6 engineering teams in productionizing <strong>AI/ML models</strong> as managed microservices with MLOps model drift monitoring and reliability practices.</li>
+          <li>Conducted <strong>CMMI v3.0</strong> engineering appraisals across 4 business units, reducing schedule variance by 30%.</li>
+          <li>Led ADKAR and CLARC change programs enabling <strong>200+ engineers</strong> to adopt AI coding agents, SRE-driven observability, and cloud-native engineering practices.</li>
+          <li>Directed technical roadmap into quarterly <strong>OKRs</strong> supporting SOC 2 Type II audit readiness and 2026 enterprise priorities.</li>
+          <li>Translated complex business and regulatory requirements into scalable <strong>API architectures</strong> and data-driven Business Intelligence solutions.</li>
+        </ul>
+      </div>
+
+      <!-- ATI -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Accurate Technologies Inc. (ATI)</span>
+          <span class="location-dates">Novi, MI &nbsp;|&nbsp; Sep 2016 – Dec 2024</span>
+        </div>
+
+        <div class="role">Software Development Manager and Hands-On Software Architect <span class="role-dates">Oct 2018 – Dec 2024</span></div>
+        <ul class="bullets">
+          <li>Architected end-to-end solution design — application, deployment, integration, and security layers — for <strong>8+ enterprise systems</strong> supporting 500+ automotive and embedded software clients globally.</li>
+          <li>Built <strong>RESTful API gateway</strong> wrapping legacy WCF licensing services, cutting partner integration onboarding time by 50%.</li>
+          <li>Designed Azure cloud footprint including <strong>Azure AD, Blob Storage, OAuth 2.0, and Auth0 SSO</strong>, supporting SaaS delivery for 300+ concurrent enterprise users.</li>
+          <li>Led <strong>.NET Framework to ASP.NET Core</strong> migration (v1.0 through .NET 6) across 6 products, reducing build times 35% and improving performance by 40%.</li>
+          <li>Raised automated test coverage from under <strong>20% to over 75%</strong> using xUnit and Moq frameworks embedded in architectural review gates.</li>
+          <li>Managed and grew a cross-functional team of <strong>12 engineers across 3 time zones</strong>, maintaining team retention above 90% over 6 years.</li>
+          <li>Delivered full <strong>SDLC ownership</strong> across 20+ major releases, consistently meeting delivery commitments within 5% of planned schedule.</li>
+          <li>Reduced integration defect rate <strong>45%</strong> through improved branching strategies and structured code reviews.</li>
+          <li>Established engineering best practices, coding standards, and architectural review processes across all delivery teams.</li>
+        </ul>
+
+        <div class="role" style="margin-top:12px;">Senior Software Engineer <span class="role-dates">Sep 2016 – Sep 2018</span></div>
+        <ul class="bullets">
+          <li>Architected enterprise <strong>SSO using Azure AD</strong> with claim-based and policy-based authorization, reducing authentication support tickets by 60%.</li>
+          <li>Built <strong>JWT middleware and OpenID Connect</strong> authentication pipeline with Swagger-documented API consumed by native C++ clients across Windows, Linux, and embedded platforms.</li>
+          <li>Designed <strong>Azure Blob</strong> upload and download API, eliminating on-premises file server dependency entirely.</li>
+          <li>Configured <strong>Auth0 and Azure AD</strong> tenant integration, reducing enterprise customer identity setup from days to under 30 minutes.</li>
+          <li>Implemented policy-based role injection from local database into <strong>token claims</strong> at login, enabling fine-grained authorization without modifying identity provider configuration.</li>
+        </ul>
+      </div>
+
+      <!-- BullsEye -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">BullsEye Telecom Inc.</span>
+          <span class="location-dates">Michigan &nbsp;|&nbsp; Jun 2015 – Feb 2016</span>
+        </div>
+        <div class="role">Team Lead / Senior Software Developer / Hands-On Architect</div>
+        <ul class="bullets">
+          <li>Transformed legacy web services into <strong>Azure-hosted Web API</strong> with versioned, time-cached responses, improving API response time 55% and supporting a 3x increase in concurrent connections.</li>
+          <li>Implemented <strong>OAuth 2.0</strong> Authorization Code Flow and machine-to-machine authentication securing Azure Blob Storage API calls, eliminating all unauthenticated endpoint exposure.</li>
+          <li>Consolidated identity management across 4 siloed platforms using <strong>Azure ACS with OKTA</strong>, delivering a unified Security Token Service for BullsEye Mobile applications.</li>
+          <li>Replaced legacy SharePoint dependency with <strong>Azure Web Jobs</strong>, auto-scaling Web Roles, and custom Blob REST APIs, reducing annual costs by approximately <strong>$80,000</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Ford -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Ford Motor Company</span>
+          <span class="location-dates">Dearborn, MI &nbsp;|&nbsp; Oct 2014 – May 2015</span>
+        </div>
+        <div class="role">Team Lead / Senior Software Developer / Azure Cloud Architect</div>
+        <ul class="bullets">
+          <li>Designed <strong>Azure PaaS data pipelines</strong> processing 1M+ daily vehicle telemetry events using Service Bus, Blob Storage, Table Storage, Azure SQL, and Worker Role queue consumers.</li>
+          <li>Architected <strong>OAuth 2.0</strong> security model implementing ACS/ADFS federation, ADAL client authorization, and Multi-Factor Authentication for Ford mobile apps.</li>
+          <li>Secured all RESTful API and Service Bus endpoints with OAuth 2.0 and SAS, achieving <strong>zero unauthorized access incidents</strong> and full compliance with Ford enterprise security standards.</li>
+          <li>Authored Azure cloud programming best practices and migration strategy documentation adopted by <strong>50+ engineers</strong> globally.</li>
+          <li>Delivered GIVIS Data Feed Performance Matrix, vehicle recall Notification Hub reaching <strong>200K+ vehicle owners</strong>, FOTA firmware-over-the-air platform, and Universal Mobile Authorization Module.</li>
+        </ul>
+      </div>
+
+      <!-- Bosch -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Bosch Automotive Aftermarket</span>
+          <span class="location-dates">Livonia, MI &nbsp;|&nbsp; Nov 2013 – Sep 2014</span>
+        </div>
+        <div class="role">Team Lead / Senior Software Developer / Hands-On Architect</div>
+        <ul class="bullets">
+          <li>Migrated 6 on-premises <strong>WCF enterprise services to Azure Service Bus relay</strong>, enabling secure cloud-hybrid connectivity for 1,200+ automotive repair shops.</li>
+          <li>Secured Azure Service Bus relay with <strong>SAS</strong> at namespace level and implemented ADAL-based mobile client authorization, eliminating all identity-related security incidents post-migration.</li>
+          <li>Documented 200,000+ lines of undocumented legacy code using nDepend, reducing new developer onboarding from <strong>6 weeks to under 2 weeks</strong>.</li>
+          <li>Maintained <strong>92%+ delivery schedule adherence</strong> across offshore teams in 3 geographies through structured TFS branching strategies.</li>
+        </ul>
+      </div>
+
+      <!-- NY State -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">State of New York — Office of Mental Health</span>
+          <span class="location-dates">Albany, NY &nbsp;|&nbsp; Aug 2012 – Nov 2013</span>
+        </div>
+        <div class="role">Senior Software Developer / Hands-On Architect</div>
+        <ul class="bullets">
+          <li>Architected <strong>Cardinal and Hospital Bulk Voucher Systems</strong> processing <strong>$200M+</strong> in annual Medicaid and Medicare pharmaceutical payments across 27 state psychiatric hospitals.</li>
+          <li>Designed <strong>HIPAA-aligned Oracle data architecture</strong> with WCF service layer and ASP.NET MVC4 front-end, meeting all PHI handling, audit logging, and access control requirements.</li>
+          <li>Delivered Client Worker Payroll System for 3,000+ patients and workers, achieving a reconciliation error rate under <strong>0.1%</strong> across $200M+ in annual transaction volume.</li>
+          <li>Implemented <strong>role-based access controls and full PHI audit trail</strong> architecture ensuring HIPAA Security Rule compliance.</li>
+        </ul>
+      </div>
+
+      <!-- Ziplogix -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Ziplogix.com</span>
+          <span class="location-dates">Michigan &nbsp;|&nbsp; May 2016 – Sep 2016</span>
+        </div>
+        <div class="role">Senior Software Developer / Mobile Architect</div>
+        <ul class="bullets">
+          <li>Built <strong>Webhook RESTful API toolkit</strong> enabling 50+ real estate technology partners to receive real-time transaction event notifications with Polly-based automated retry logic.</li>
+          <li>Architected and delivered cross-platform <strong>iOS and Android</strong> enterprise mobile application using Adobe PhoneGap, Framework7, and Cordova plugins, enabling 10,000+ field agents to manage transactions on mobile.</li>
+          <li>Produced comprehensive partner developer documentation, reducing partner onboarding from 3 weeks to <strong>under 5 days</strong>.</li>
+        </ul>
+      </div>
+
+      <!-- Forsythe -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Forsythe Technology — Client: Western Mutual</span>
+          <span class="location-dates">Chicago, IL &nbsp;|&nbsp; Mar 2016 – Apr 2016</span>
+        </div>
+        <div class="role">Senior Cloud Security Architect</div>
+        <ul class="bullets">
+          <li>Architected on-premises <strong>Active Directory to Office 365 SSO migration</strong> for 2,000+ users using ADFS, defining identity strategy across synchronized, federated, and cloud-only identity models.</li>
+          <li>Designed phased migration execution plan enabling a fully <strong>zero-downtime transition</strong> to cloud identity.</li>
+          <li>Produced ADFS configuration and Azure AD Connect documentation adopted as the <strong>standard implementation reference guide</strong> by the full deployment team.</li>
+        </ul>
+      </div>
+
+      <!-- eSoftPoint -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">eSoftPoint Tech</span>
+          <span class="location-dates">Plano, TX &nbsp;|&nbsp; May 2008 – Aug 2012</span>
+        </div>
+        <div class="role">Software Engineer to Senior Software Developer</div>
+        <ul class="bullets">
+          <li>Progressed from entry-level to <strong>Senior Software Developer in under 3 years</strong>, delivering 15+ client web application projects across retail, logistics, and professional services on the Microsoft .NET platform.</li>
+          <li>Built ASP.NET MVC, Web Forms, WCF, and Entity Framework solutions on SQL Server, consistently delivering full-stack applications on time and within budget.</li>
+          <li>Reduced client manual data entry <strong>60%</strong> per engagement by designing SOAP and WCF service integrations enabling real-time third-party data exchange across 8+ client platforms.</li>
+          <li>Established TFS and Visual Source Safe version control standards and branching discipline across development teams of 3 to 8 engineers.</li>
+        </ul>
+      </div>
+
+      <!-- AGFA -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">AGFA HealthCare</span>
+          <span class="location-dates">Westerly, RI &nbsp;|&nbsp; Dec 2006 – Feb 2008</span>
+        </div>
+        <div class="role">Systems Test Engineer</div>
+        <ul class="bullets">
+          <li>Designed and executed system-level test plans for enterprise <strong>healthcare imaging</strong> and clinical information management platforms serving hospitals and radiology clinics.</li>
+          <li>Identified <strong>200+ defects</strong> across 4 major release cycles through functional, regression, integration, and performance testing of HIPAA-regulated multi-module healthcare software.</li>
+          <li>Reduced manual regression cycle time <strong>35%</strong> by building test automation scripts and structured test data sets.</li>
+        </ul>
+      </div>
+
+      <!-- ASKE -->
+      <div class="job">
+        <div class="job-header">
+          <span class="company">ASKE Canada</span>
+          <span class="location-dates">Toronto, Canada &nbsp;|&nbsp; Apr 2001 – Sep 2006</span>
+        </div>
+        <div class="role">Manager, Software QA Engineering</div>
+        <ul class="bullets">
+          <li>Led a <strong>QA engineering team of 8</strong> validating enterprise software products across 6 concurrent development programs.</li>
+          <li>Reduced post-release defect escape rate <strong>50% over 2 years</strong> by establishing company-wide QA processes, defect tracking workflows, and quality metrics dashboards.</li>
+          <li>Designed comprehensive test strategies spanning functional, regression, integration, UAT, and performance disciplines for enterprise systems with <strong>100,000+ active end users</strong>.</li>
+          <li>Recruited and developed 5 QA engineers from junior to mid-level, building structured test planning and early test automation capability.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <!-- ══ TECHNICAL SKILLS ══ -->
+    <section>
+      <div class="section-title">Technical Skills</div>
+      <table class="skills-table">
+        <tr>
+          <td>Cloud &amp; IaC</td>
+          <td>Azure (IaaS, PaaS, SaaS, Service Bus, Blob Storage, Azure AD, Azure DevOps, Azure ML, Azure OpenAI Service), AWS, GCP, Terraform, CloudFormation, Bicep, ARM Templates</td>
+        </tr>
+        <tr>
+          <td>Architecture</td>
+          <td>Multi-cloud, Microservices, N-Tier, SOA, Event-Driven, Serverless, API Gateway, CQRS, Domain-Driven Design, Cloud-Native Transformation, Migration Strategy</td>
+        </tr>
+        <tr>
+          <td>Security &amp; Identity</td>
+          <td>OAuth 2.0, OpenID Connect, Azure AD, Entra ID, ADFS, JWT, ADAL, ACS, SAS, SAML, WIF, Zero Trust patterns, Auth0</td>
+        </tr>
+        <tr>
+          <td>Compliance &amp; Governance</td>
+          <td>SOC 2 Type II, HIPAA, CMMI v3.0, Architecture Review Board facilitation, enterprise risk management, audit trail design</td>
+        </tr>
+        <tr>
+          <td>DevOps &amp; CI/CD</td>
+          <td>Azure DevOps, GitHub Actions, Jenkins, GitLab CI, Docker, Kubernetes, tfsec, Trivy, OpenTelemetry, SAST/DAST scanning</td>
+        </tr>
+        <tr>
+          <td>Observability &amp; SRE</td>
+          <td>Prometheus, Grafana, ELK Stack, Azure Monitor, Application Insights, OpenTelemetry, distributed tracing and incident response automation</td>
+        </tr>
+        <tr>
+          <td>Languages</td>
+          <td>C#, JavaScript, TypeScript, PowerShell, T-SQL, HTML5, CSS3, Node.js, VB.NET</td>
+        </tr>
+        <tr>
+          <td>Frameworks</td>
+          <td>ASP.NET Core (MVC, Web API, Blazor), Entity Framework Core, SignalR, WCF, jQuery, Angular, Bootstrap</td>
+        </tr>
+        <tr>
+          <td>Databases</td>
+          <td>SQL Server, Oracle, Azure SQL, CosmosDB, Azure Table Storage, NoSQL, SSRS, SSIS, SSAS</td>
+        </tr>
+        <tr>
+          <td>AI &amp; ML</td>
+          <td>Azure OpenAI Service, Azure Machine Learning, Cognitive Services, AI Studio, MLOps, model drift monitoring, productionized AI microservices</td>
+        </tr>
+        <tr>
+          <td>Methodology</td>
+          <td>Agile, Scrum, SAFe, DevSecOps, Site Reliability Engineering, CMMI v3.0, Waterfall, ADKAR Change Management, CLARC Coaching</td>
+        </tr>
+        <tr>
+          <td>Tools</td>
+          <td>Visual Studio 2022, VS Code, Postman, JIRA, Confluence, TFS, GitHub, Swagger, TOAD, VISIO, Azure Storage Explorer, SoapUI, LINQPad</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- ══ CERTIFICATIONS ══ -->
+    <section>
+      <div class="section-title">Certifications</div>
+      <ul class="cert-list">
+        <li>Microsoft Certified Azure Solutions Architect (2023)</li>
+        <li>MCSD (Microsoft Certified Solutions Developer): Web Development (2013)</li>
+        <li>Microsoft Certified Professional (2013)</li>
+        <li>Microsoft Specialist: Programming in HTML5 with JavaScript and CSS3 (2013)</li>
+        <li>OCA (Oracle 11G) Oracle Database Administrator Certified Associate (2012)</li>
+      </ul>
+    </section>
+
+    <!-- ══ EDUCATION ══ -->
+    <section>
+      <div class="section-title">Education</div>
+      <div class="edu-item">
+        <div>
+          <div class="degree">Master of Science, Computer Science</div>
+          <div class="school">University of Bridgeport — Bridgeport, CT</div>
+        </div>
+        <div class="year">2000</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="degree">Bachelor of Engineering, Computer Science and Engineering</div>
+          <div class="school">Gulbarga University — Gulbarga, Karnataka, India</div>
+        </div>
+        <div class="year">1994</div>
+      </div>
+    </section>
+
+  </div><!-- /.body -->
+</div><!-- /.page -->
+</body>
+</html>
